@@ -1,0 +1,21 @@
+{
+    "timestamp": "2025-03-14T13:11:30.868152",
+    "summary": {
+        "total_transactions": 1000,
+        "anomaly_count": 54,
+        "anomaly_rate": 0.054
+    },
+    "score_distribution": {
+        "mean": 0.44275486160579486,
+        "median": 0.45382540476949595,
+        "std": 0.20244418354749377,
+        "min": 0.05250937060305947,
+        "max": 1.0
+    },
+    "config": {
+        "similarity_threshold": 0.8,
+        "min_cluster_size": 5,
+        "anomaly_threshold": 0.95,
+        "use_clustering": true
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "total_transactions": 100000,
+    "anomalies_detected": 99016,
+    "alerts_generated": 99016,
+    "processing_time_seconds": 147.5275321006775
+}

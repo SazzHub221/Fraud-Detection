@@ -1,0 +1,63 @@
+# Data Generation Settings
+data:
+  train_size: 100000
+  test_size: 1000
+  fraud_ratio: 0.01
+  seed: 42
+  save_path: data/raw/transactions.csv
+
+# Preprocessing Settings
+preprocessing:
+  text_cleaning:
+    remove_special_chars: true
+    remove_numbers: false
+    lowercase: true
+  feature_engineering:
+    amount_bins: 10
+    time_features: true
+
+# Model Settings
+model:
+  embedding:
+    model_name: all-MiniLM-L6-v2
+    max_length: 128
+    batch_size: 32
+    device: "cuda"  # or "cpu"
+  anomaly_detection:
+    similarity_threshold: 0.8
+    anomaly_threshold: 0.95
+    min_cluster_size: 5
+    n_neighbors: 5
+    use_clustering: true
+
+# Vector Database Settings
+vector_db:
+  index_type: "IVFFlat"
+  nlist: 100
+  nprobe: 10
+
+# Pipeline Settings
+pipeline:
+  sample_size: null
+  parallel_processing: true
+  max_workers: 4
+
+# Logging Settings
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  rotation: "1 day"
+  retention: "30 days"
+
+# Monitoring Settings
+monitoring:
+  log_level: INFO
+  metrics_interval: 60
+  save_path: logs/metrics
+
+# Alert Settings
+alerts:
+  min_confidence: 0.8
+  max_daily_alerts: 1000
+  save_path: data/alerts
+  notification_email: "alerts@company.com" 
